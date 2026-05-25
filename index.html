@@ -16,746 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoPower | ODS 7 - Energía Asequible y No Contaminante</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
-    <!-- ===== PRELOADER ===== -->
-    <div id="preloader">
-        <div class="loader">
-            <div class="sun-loader">
-                <div class="sun-core"></div>
-                <div class="sun-rays"></div>
-            </div>
-            <p>Cargando EcoPower...</p>
-        </div>
-    </div>
-
-    <!-- ===== PARTÍCULAS DE FONDO ===== -->
-    <canvas id="particles-canvas"></canvas>
-
-    <!-- ===== BARRA DE PROGRESO DE SCROLL ===== -->
-    <div id="scroll-progress"></div>
-
-    <!-- ===== NAVEGACIÓN ===== -->
-    <nav id="navbar" class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-bolt"></i>
-                <span>EcoPower</span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                <li><a href="#equipo" class="nav-link">Equipo</a></li>
-                <li><a href="#carrusel" class="nav-link">Carrusel</a></li>
-                <li><a href="#sobre-ods7" class="nav-link">Sobre ODS 7</a></li>
-                <li><a href="#metas" class="nav-link">Metas</a></li>
-                <li><a href="#datos" class="nav-link">Datos</a></li>
-                <li><a href="#recursos" class="nav-link">Recursos</a></li>
-                <li><a href="#accion" class="nav-link">¿Cómo Ayudar?</a></li>
-            </ul>
-            <button class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- ===== MARQUESINA SUPERIOR ===== -->
-    <div class="marquee-container">
-        <div class="marquee">
-            <span>⚡ ODS 7: Energía Asequible y No Contaminante</span>
-            <span>🌍 Garantizar acceso a energía sostenible para todos</span>
-            <span>🔋 Transición energética es clave para el futuro</span>
-            <span>☀️ Energía limpia = Futuro mejor</span>
-            <span>🌱 Equipo EcoPower por un mundo sostenible</span>
-            <span>⚡ ODS 7: Energía Asequible y No Contaminante</span>
-            <span>🌍 Garantizar acceso a energía sostenible para todos</span>
-            <span>🔋 Transición energética es clave para el futuro</span>
-            <span>☀️ Energía limpia = Futuro mejor</span>
-            <span>🌱 Equipo EcoPower por un mundo sostenible</span>
-        </div>
-    </div>
-
-    <!-- ===== SEGUNDA MARQUESINA ===== -->
-    <div class="marquee-container marquee-reverse">
-        <div class="marquee marquee-reverse-anim">
-            <span>🏆 Meta 2030: Acceso universal a servicios energéticos modernos</span>
-            <span>📊 733 millones de personas aún no tienen electricidad</span>
-            <span>🌞 La energía renovable es la solución</span>
-            <span>💡 Innovación energética para el desarrollo sostenible</span>
-            <span>🏆 Meta 2030: Acceso universal a servicios energéticos modernos</span>
-            <span>📊 733 millones de personas aún no tienen electricidad</span>
-            <span>🌞 La energía renovable es la solución</span>
-            <span>💡 Innovación energética para el desarrollo sostenible</span>
-        </div>
-    </div>
-
-    <!-- ===== HERO / INICIO ===== -->
-    <section id="inicio" class="hero">
-        <div class="hero-bg-animation">
-            <div class="floating-icon icon-1"><i class="fas fa-solar-panel"></i></div>
-            <div class="floating-icon icon-2"><i class="fas fa-wind"></i></div>
-            <div class="floating-icon icon-3"><i class="fas fa-bolt"></i></div>
-            <div class="floating-icon icon-4"><i class="fas fa-leaf"></i></div>
-            <div class="floating-icon icon-5"><i class="fas fa-fire"></i></div>
-            <div class="floating-icon icon-6"><i class="fas fa-water"></i></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-badge animate-fade-in">
-                <i class="fas fa-globe-americas"></i> Objetivos de Desarrollo Sostenible
-            </div>
-            <h1 class="hero-title animate-slide-up">
-                <span class="highlight">ODS 7</span><br>
-                Energía Asequible y<br>No Contaminante
-            </h1>
-            <p class="hero-subtitle animate-slide-up-delay">
-                Garantizar el acceso a una energía asequible, fiable, sostenible y moderna para todos
-            </p>
-            <div class="hero-buttons animate-fade-in-delay">
-                <a href="#sobre-ods7" class="btn btn-primary">
-                    <i class="fas fa-info-circle"></i> Conocer Más
-                </a>
-                <a href="#recursos" class="btn btn-secondary">
-                    <i class="fas fa-link"></i> Recursos ONU
-                </a>
-            </div>
-            <div class="hero-stats animate-fade-in-delay-2">
-                <div class="stat">
-                    <span class="stat-number" data-target="733">0</span>
-                    <span class="stat-suffix">M</span>
-                    <p>Sin electricidad</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="2300">0</span>
-                    <span class="stat-suffix">M</span>
-                    <p>Sin combustibles limpios</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="29">0</span>
-                    <span class="stat-suffix">%</span>
-                    <p>Energía renovable mundial</p>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Desplázate</p>
-        </div>
-    </section>
-
-    <!-- ===== EQUIPO ===== -->
-    <section id="equipo" class="team-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-users"></i> Nuestro Equipo</span>
-                <h2>Conoce al Equipo <span class="gradient-text">EcoPower</span></h2>
-                <p class="section-description">
-                    Somos un equipo comprometido con la difusión del Objetivo de Desarrollo Sostenible 7,
-                    promoviendo la conciencia sobre la importancia de la energía limpia y accesible para todos.
-                </p>
-            </div>
-
-            <div class="team-grid">
-                <!-- Miembro 1 -->
-                <div class="team-card" data-tilt>
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <div class="avatar-circle">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <h3>Catherine Arredondo</h3>
-                        <p class="team-role">Integrante del Equipo</p>
-                        <div class="team-socials">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Miembro 2 -->
-                <div class="team-card" data-tilt>
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <div class="avatar-circle">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <h3>Valentina Maciel</h3>
-                        <p class="team-role">Integrante del Equipo</p>
-                        <div class="team-socials">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Miembro 3 -->
-                <div class="team-card" data-tilt>
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <div class="avatar-circle">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <h3>Camila Miranda</h3>
-                        <p class="team-role">Integrante del Equipo</p>
-                        <div class="team-socials">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Miembro 4 -->
-                <div class="team-card" data-tilt>
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <div class="avatar-circle">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <h3>David Barrios</h3>
-                        <p class="team-role">Integrante del Equipo</p>
-                        <div class="team-socials">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Profesor -->
-            <div class="professor-card">
-                <div class="professor-inner">
-                    <div class="professor-avatar">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <div class="professor-info">
-                        <span class="professor-label"><i class="fas fa-award"></i> Profesor Asesor</span>
-                        <h3>Prof. Juan Ramón Oropeza</h3>
-                        <p>Guía y mentor del equipo EcoPower en el desarrollo de este proyecto
-                           sobre el ODS 7, impulsando la investigación y la conciencia ambiental.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CARRUSEL ===== -->
-    <section id="carrusel" class="carousel-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-images"></i> Galería Visual</span>
-                <h2>Energía que <span class="gradient-text">Transforma el Mundo</span></h2>
-                <p class="section-description">
-                    Descubre cómo las energías renovables están revolucionando nuestro planeta
-                    y creando un futuro más sostenible para las próximas generaciones.
-                </p>
-            </div>
-
-            <div class="carousel-wrapper">
-                <div class="carousel" id="carousel">
-                    <!-- Slide 1 -->
-                    <div class="carousel-slide active">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">01 / 06</span>
-                                    <h3>Energía Solar</h3>
-                                    <p>La energía solar fotovoltaica es una de las fuentes de energía renovable más prometedoras, capaz de transformar la luz del sol en electricidad limpia y sostenible.</p>
-                                    <a href="https://www.un.org/es/energy/solar" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">02 / 06</span>
-                                    <h3>Energía Eólica</h3>
-                                    <p>Los aerogeneradores capturan la fuerza del viento para generar electricidad sin emisiones de carbono, siendo una pieza clave en la transición energética global.</p>
-                                    <a href="https://www.un.org/en/climatechange/wind-energy" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1574360778004-9277e2455d0f?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">03 / 06</span>
-                                    <h3>Energía Hidroeléctrica</h3>
-                                    <p>El agua es un recurso invaluable para la generación de energía renovable. Las centrales hidroeléctricas proveen electricidad limpia a millones de hogares en todo el mundo.</p>
-                                    <a href="https://www.un.org/en/energy/hydro" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1559302504-64aae6ca646d?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">04 / 06</span>
-                                    <h3>Energía Geotérmica</h3>
-                                    <p>Aprovechando el calor del interior de la Tierra, la energía geotérmica ofrece una fuente constante y confiable de electricidad y calefacción sostenible.</p>
-                                    <a href="https://www.irena.org/Geothermal" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en IRENA
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1621274403997-37aace184f49?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">05 / 06</span>
-                                    <h3>Eficiencia Energética</h3>
-                                    <p>Mejorar la eficiencia energética en edificios, industria y transporte es fundamental para reducir el consumo de energía y las emisiones de gases de efecto invernadero.</p>
-                                    <a href="https://sdgs.un.org/goals/goal7" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 6 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1548613053-220e75581890?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">06 / 06</span>
-                                    <h3>Acceso Universal a la Energía</h3>
-                                    <p>Más de 700 millones de personas aún carecen de acceso a electricidad. El ODS 7 busca garantizar que todos tengan acceso a servicios energéticos modernos y asequibles.</p>
-                                    <a href="https://www.un.org/sustainabledevelopment/energy/" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controles del Carrusel -->
-                <button class="carousel-btn carousel-prev" id="carousel-prev">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn carousel-next" id="carousel-next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <!-- Indicadores -->
-                <div class="carousel-indicators" id="carousel-indicators">
-                    <button class="indicator active" data-slide="0"></button>
-                    <button class="indicator" data-slide="1"></button>
-                    <button class="indicator" data-slide="2"></button>
-                    <button class="indicator" data-slide="3"></button>
-                    <button class="indicator" data-slide="4"></button>
-                    <button class="indicator" data-slide="5"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SOBRE EL ODS 7 ===== -->
-    <section id="sobre-ods7" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-bullseye"></i> ODS 7</span>
-                <h2>¿Qué es el <span class="gradient-text">ODS 7?</span></h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-main-card">
-                    <div class="ods-icon-large">
-                        <svg viewBox="0 0 155 155" class="ods7-svg">
-                            <rect x="0" y="0" width="155" height="155" rx="10" fill="#FCC30B"/>
-                            <text x="50%" y="35%" dominant-baseline="middle" text-anchor="middle"
-                                  font-family="Poppins, sans-serif" font-weight="900" font-size="60"
-                                  fill="#1A1A1A">7</text>
-                            <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle"
-                                  font-family="Poppins, sans-serif" font-weight="700" font-size="11"
-                                  fill="#1A1A1A">ENERGÍA ASEQUIBLE</text>
-                            <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle"
-                                  font-family="Poppins, sans-serif" font-weight="700" font-size="11"
-                                  fill="#1A1A1A">Y NO CONTAMINANTE</text>
-                            <text x="50%" y="88%" dominant-baseline="middle" text-anchor="middle"
-                                  font-family="Poppins, sans-serif" font-weight="400" font-size="8"
-                                  fill="#1A1A1A">para todos</text>
-                        </svg>
-                    </div>
-                    <div class="about-text">
-                        <h3>Garantizar acceso a energía asequible, fiable, sostenible y moderna para todos</h3>
-                        <p>
-                            El Objetivo 7 de la Agenda 2030 para el Desarrollo Sostenible, adoptado por todos los
-                            Estados Miembros de las Naciones Unidas en 2015, busca garantizar el acceso universal
-                            a servicios de energía asequibles, fiables y modernos. La energía es central para
-                            prácticamente todos los desafíos y oportunidades principales que enfrenta el mundo
-                            actualmente.
-                        </p>
-                        <p>
-                            El acceso a la energía es esencial para la vida moderna: desde la iluminación de hogares
-                            hasta el funcionamiento de hospitales, escuelas y empresas. Sin embargo, millones de
-                            personas aún carecen de este derecho fundamental. La transición hacia fuentes de energía
-                            renovable es urgente para combatir el cambio climático y asegurar un futuro sostenible.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="about-info-cards">
-                    <div class="info-card">
-                        <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
-                        <h4>Agenda 2030</h4>
-                        <p>Adoptado en septiembre de 2015 por la Asamblea General de la ONU como parte de los 17 Objetivos de Desarrollo Sostenible.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon"><i class="fas fa-globe"></i></div>
-                        <h4>Alcance Global</h4>
-                        <p>Aplica a los 193 Estados Miembros de la ONU, buscando soluciones energéticas que funcionen para todos los países del mundo.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon"><i class="fas fa-handshake"></i></div>
-                        <h4>Cooperación Internacional</h4>
-                        <p>Requiere la colaboración entre gobiernos, sector privado, sociedad civil y organismos internacionales para lograr las metas.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon"><i class="fas fa-chart-line"></i></div>
-                        <h4>Seguimiento Continuo</h4>
-                        <p>Se monitorea mediante indicadores específicos como el acceso a electricidad, energías limpias para cocinar y eficiencia energética.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Importancia -->
-            <div class="importance-section">
-                <h3 class="importance-title">¿Por qué es importante el ODS 7?</h3>
-                <div class="importance-grid">
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-heartbeat"></i></div>
-                        <h4>Salud</h4>
-                        <p>La contaminación del aire interior por combustibles tradicionales causa millones de muertes prematuras cada año. La energía limpia salva vidas.</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <h4>Educación</h4>
-                        <p>La electricidad permite estudiar de noche, usar computadoras y acceder a información digital, mejorando la calidad educativa.</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-briefcase"></i></div>
-                        <h4>Economía</h4>
-                        <p>La energía impulsa la industria, crea empleos y genera crecimiento económico sostenible en todas las regiones del mundo.</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-thermometer-half"></i></div>
-                        <h4>Clima</h4>
-                        <p>El sector energético representa el 60% de las emisiones globales de GEI. La transición renovable es clave contra el cambio climático.</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-female"></i></div>
-                        <h4>Igualdad de Género</h4>
-                        <p>El acceso a energía libera a mujeres y niñas de la carga de recolectar leña, dándoles tiempo para educación y oportunidades económicas.</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-seedling"></i></div>
-                        <h4>Medio Ambiente</h4>
-                        <p>Las energías renovables reducen la contaminación del aire y agua, protegen la biodiversidad y conservan los ecosistemas naturales.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== METAS DEL ODS 7 ===== -->
-    <section id="metas" class="goals-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-flag-checkered"></i> Metas 2030</span>
-                <h2>Las <span class="gradient-text">4 Metas</span> del ODS 7</h2>
-                <p class="section-description">
-                    El ODS 7 establece metas específicas y medibles para lograr un futuro energético sostenible antes de 2030.
-                </p>
-            </div>
-
-            <div class="goals-timeline">
-                <!-- Meta 7.1 -->
-                <div class="goal-item">
-                    <div class="goal-number">7.1</div>
-                    <div class="goal-content">
-                        <div class="goal-header">
-                            <div class="goal-icon"><i class="fas fa-plug"></i></div>
-                            <h3>Acceso Universal a Servicios Energéticos</h3>
-                        </div>
-                        <p>
-                            De aquí a 2030, garantizar el acceso universal a servicios energéticos asequibles, fiables y modernos.
-                            Esto implica que cada persona en el planeta tenga acceso a electricidad y a soluciones limpias para cocinar.
-                            Actualmente, más de 733 millones de personas no tienen acceso a electricidad y alrededor de 2.300 millones
-                            dependen de combustibles contaminantes para cocinar.
-                        </p>
-                        <div class="goal-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-width="65" style="width: 0%;">
-                                    <span class="progress-percent">65%</span>
-                                </div>
-                            </div>
-                            <span class="progress-label">Progreso actual estimado</span>
-                        </div>
-                        <a href="https://sdgs.un.org/goals/goal7#targets" target="_blank" class="goal-link">
-                            <i class="fas fa-external-link-alt"></i> Ver meta completa en la ONU
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Meta 7.2 -->
-                <div class="goal-item">
-                    <div class="goal-number">7.2</div>
-                    <div class="goal-content">
-                        <div class="goal-header">
-                            <div class="goal-icon"><i class="fas fa-solar-panel"></i></div>
-                            <h3>Aumentar la Proporción de Energías Renovables</h3>
-                        </div>
-                        <p>
-                            De aquí a 2030, aumentar considerablemente la proporción de energía renovable en el组合 energético mundial.
-                            Las energías renovables —solar, eólica, hidroeléctrica, geotérmica y de biomasa— deben pasar de representar
-                            aproximadamente el 29% de la generación eléctrica a más del 60% para cumplir con los objetivos climáticos
-                            del Acuerdo de París y limitar el calentamiento global a 1.5°C.
-                        </p>
-                        <div class="goal-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-width="45" style="width: 0%;">
-                                    <span class="progress-percent">45%</span>
-                                </div>
-                            </div>
-                            <span class="progress-label">Progreso actual estimado</span>
-                        </div>
-                        <a href="https://www.un.org/en/global-issues/energy" target="_blank" class="goal-link">
-                            <i class="fas fa-external-link-alt"></i> Ver meta completa en la ONU
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Meta 7.3 -->
-                <div class="goal-item">
-                    <div class="goal-number">7.3</div>
-                    <div class="goal-content">
-                        <div class="goal-header">
-                            <div class="goal-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            <h3>Duplicar la Tasa Mundial de Mejora de la Eficiencia Energética</h3>
-                        </div>
-                        <p>
-                            De aquí a 2030, duplicar la tasa mundial de mejora de la eficiencia energética. Esto significa hacer más
-                            con menos energía: mejorar el aislamiento de edificios, usar electrodomésticos más eficientes, optimizar
-                            procesos industriales y promover el transporte eléctrico. La eficiencia energética es considerada el
-                            "primer combustible" por la Agencia Internacional de Energía (AIE).
-                        </p>
-                        <div class="goal-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-width="40" style="width: 0%;">
-                                    <span class="progress-percent">40%</span>
-                                </div>
-                            </div>
-                            <span class="progress-label">Progreso actual estimado</span>
-                        </div>
-                        <a href="https://www.iea.org/topics/energy-efficiency" target="_blank" class="goal-link">
-                            <i class="fas fa-external-link-alt"></i> Ver meta completa en la IEA
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Meta 7.a y 7.b -->
-                <div class="goal-item">
-                    <div class="goal-number">7.a/b</div>
-                    <div class="goal-content">
-                        <div class="goal-header">
-                            <div class="goal-icon"><i class="fas fa-globe-americas"></i></div>
-                            <h3>Cooperación Internacional e Infraestructura</h3>
-                        </div>
-                        <p>
-                            <strong>Meta 7.a:</strong> De aquí a 2030, intensificar la cooperación internacional para facilitar el acceso
-                            a la investigación y la tecnología relativas a la energía limpia, incluidas las fuentes renovables, la eficiencia
-                            energética y las tecnologías avanzadas y menos contaminantes de combustibles fósiles, y promover la inversión
-                            en infraestructura energética y tecnologías de energía limpia.<br><br>
-                            <strong>Meta 7.b:</strong> De aquí a 2030, ampliar la infraestructura y mejorar la tecnología para prestar
-                            servicios energéticos modernos y sostenibles para todos los países en desarrollo, en particular los países
-                            menos adelantados, los pequeños Estados insulares en desarrollo y los países en desarrollo sin litoral.
-                        </p>
-                        <div class="goal-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-width="35" style="width: 0%;">
-                                    <span class="progress-percent">35%</span>
-                                </div>
-                            </div>
-                            <span class="progress-label">Progreso actual estimado</span>
-                        </div>
-                        <a href="https://sdgs.un.org/goals/goal7#targets" target="_blank" class="goal-link">
-                            <i class="fas fa-external-link-alt"></i> Ver metas completas en la ONU
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== DATOS Y ESTADÍSTICAS ===== -->
-    <section id="datos" class="stats-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-chart-bar"></i> Datos Clave</span>
-                <h2>El ODS 7 en <span class="gradient-text">Números</span></h2>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-lightbulb"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="733">0</span>
-                        <span class="stat-unit">millones</span>
-                    </div>
-                    <p>Personas sin acceso a electricidad en el mundo</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-fire-burner"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="2300">0</span>
-                        <span class="stat-unit">millones</span>
-                    </div>
-                    <p>Personas que usan combustibles contaminantes para cocinar</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-solar-panel"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="29">0</span>
-                        <span class="stat-unit">%</span>
-                    </div>
-                    <p>De la electricidad mundial proviene de fuentes renovables</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-skull-crossbones"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="3200">0</span>
-                        <span class="stat-unit">mil</span>
-                    </div>
-                    <p>Muertes prematuras anuales por contaminación del aire interior</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-coins"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="1300">0</span>
-                        <span class="stat-unit">mil M$</span>
-                    </div>
-                    <p>Inversión anual necesaria en energías limpias para 2030</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-wind"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="83">0</span>
-                        <span class="stat-unit">%</span>
-                    </div>
-                    <p>De la nueva capacidad eléctrica mundial en 2022 fue renovable</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ENERGÍAS RENOVABLES DETALLE ===== -->
-    <section class="renewable-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-leaf"></i> Energías Limpias</span>
-                <h2>Tipos de <span class="gradient-text">Energía Renovable</span></h2>
-                <p class="section-description">
-                    Conoce las principales fuentes de energía limpia que están transformando nuestro futuro energético.
-                </p>
-            </div>
-
-            <div class="renewable-cards">
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background: linear-gradient(135deg, #FFD700, #FFA500);">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <h3>Solar</h3>
-                    <p>Capta la radiación del sol mediante paneles fotovoltaicos o sistemas térmicos para generar electricidad y calor.</p>
-                    <ul class="renewable-list">
-                        <li><i class="fas fa-check"></i> Paneles fotovoltaicos</li>
-                        <li><i class="fas fa-check"></i> Energía solar térmica</li>
-                        <li><i class="fas fa-check"></i> Concentración solar</li>
-                    </ul>
-                    <a href="https://www.irena.org/Solar" target="_blank" class="renewable-link">
-                        <i class="fas fa-arrow-right"></i> Más en IRENA
-                    </a>
-                </div>
-
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background: linear-gradient(135deg, #87CEEB, #4682B4);">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <h3>Eólica</h3>
-                    <p>Utiliza la fuerza del viento mediante aerogeneradores para producir electricidad de forma limpia y renovable.</p>
-                    <ul class="renewable-list">
-                        <li><i class="fas fa-check"></i> Turbinas terrestres</li>
-                        <li><i class="fas fa-check"></i> Turbinas marinas (offshore)</li>
-                        <li><i class="fas fa-check"></i> Mini-eólica distribuida</li>
-                    </ul>
-                    <a href="https://www.irena.org/Wind" target="_blank" class="renewable-link">
-                        <i class="fas fa-arrow-right"></i> Más en IRENA
-                    </a>
-                </div>
-
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background: linear-gradient(135deg, #4169E1, #1E90FF);">
-                        <i class="fas fa-water"></i><think>
-The user wants me to complete the HTML code. Let me continue with the rest of the page and then provide the CSS and JavaScript sections.
-</think>
-
-Aquí está el código completo por partes:
-
----
-
-## 📄 HTML (`index.html`)
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoPower | ODS 7 - Energía Asequible y No Contaminante</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Fuentes e Iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -763,891 +25,357 @@ Aquí está el código completo por partes:
     <!-- PRELOADER -->
     <div id="preloader">
         <div class="loader">
-            <div class="sun-loader">
-                <div class="sun-core"></div>
-                <div class="sun-rays"></div>
-            </div>
-            <p>Cargando EcoPower...</p>
+            <div class="spinner"></div>
+            <p>EcoPower</p>
         </div>
     </div>
 
-    <!-- PARTÍCULAS DE FONDO -->
-    <canvas id="particles-canvas"></canvas>
-
-    <!-- BARRA DE PROGRESO DE SCROLL -->
+    <!-- BARRA DE PROGRESO -->
     <div id="scroll-progress"></div>
 
     <!-- NAVEGACIÓN -->
-    <nav id="navbar" class="navbar">
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-bolt"></i>
-                <span>EcoPower</span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                <li><a href="#equipo" class="nav-link">Equipo</a></li>
-                <li><a href="#carrusel" class="nav-link">Carrusel</a></li>
-                <li><a href="#sobre-ods7" class="nav-link">Sobre ODS 7</a></li>
-                <li><a href="#metas" class="nav-link">Metas</a></li>
-                <li><a href="#datos" class="nav-link">Datos</a></li>
-                <li><a href="#recursos" class="nav-link">Recursos</a></li>
-                <li><a href="#accion" class="nav-link">¿Cómo Ayudar?</a></li>
+            <a href="#" class="nav-logo"><i class="fas fa-bolt"></i> EcoPower</a>
+            <button class="nav-toggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#carrusel">Galería</a></li>
+                <li><a href="#info">ODS 7</a></li>
+                <li><a href="#metas">Metas</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#blog">Blog</a></li>
             </ul>
-            <button class="nav-toggle" id="nav-toggle">
-                <span></span><span></span><span></span>
-            </button>
         </div>
     </nav>
 
-    <!-- MARQUESINA 1 -->
-    <div class="marquee-container">
-        <div class="marquee">
-            <span>⚡ ODS 7: Energía Asequible y No Contaminante</span>
-            <span>🌍 Garantizar acceso a energía sostenible para todos</span>
-            <span>🔋 Transición energética es clave para el futuro</span>
-            <span>☀️ Energía limpia = Futuro mejor</span>
-            <span>🌱 Equipo EcoPower por un mundo sostenible</span>
-            <span>⚡ ODS 7: Energía Asequible y No Contaminante</span>
-            <span>🌍 Garantizar acceso a energía sostenible para todos</span>
-            <span>🔋 Transición energética es clave para el futuro</span>
+    <!-- MARQUESINA DOBLE -->
+    <div class="marquee-wrapper">
+        <div class="marquee marquee-1">
+            <span>⚡ ODS 7: Garantizar el acceso a una energía asequible, fiable, sostenible y moderna para todos.</span>
+            <span>🌍 Transición energética global hacia fuentes limpias y renovables.</span>
+            <span>🔋 Energía es sinónimo de desarrollo, salud y oportunidades.</span>
+            <span>☀️ El futuro es renovable: Solar, Eólica, Hidroeléctrica.</span>
+            <span>⚡ ODS 7: Garantizar el acceso a una energía asequible, fiable, sostenible y moderna para todos.</span>
+        </div>
+        <div class="marquee marquee-2">
+            <span>📊 Más de 700 millones de personas aún viven sin electricidad.</span>
+            <span>🌱 La energía renovable creció un 50% a nivel mundial en la última década.</span>
+            <span>🤝 Juntos por un planeta sostenible y carbono neutral.</span>
+            <span>💡 Innovación y tecnología al servicio del ODS 7.</span>
+            <span>📊 Más de 700 millones de personas aún viven sin electricidad.</span>
         </div>
     </div>
 
-    <!-- MARQUESINA 2 (sentido inverso) -->
-    <div class="marquee-container marquee-reverse">
-        <div class="marquee marquee-reverse-anim">
-            <span>🏆 Meta 2030: Acceso universal a servicios energéticos modernos</span>
-            <span>📊 733 millones de personas aún no tienen electricidad</span>
-            <span>🌞 La energía renovable es la solución</span>
-            <span>💡 Innovación energética para el desarrollo sostenible</span>
-            <span>🏆 Meta 2030: Acceso universal a servicios energéticos modernos</span>
-            <span>📊 733 millones de personas aún no tienen electricidad</span>
-            <span>🌞 La energía renovable es la solución</span>
-            <span>💡 Innovación energética para el desarrollo sostenible</span>
-        </div>
-    </div>
-
-    <!-- HERO / INICIO -->
-    <section id="inicio" class="hero">
-        <div class="hero-bg-animation">
-            <div class="floating-icon icon-1"><i class="fas fa-solar-panel"></i></div>
-            <div class="floating-icon icon-2"><i class="fas fa-wind"></i></div>
-            <div class="floating-icon icon-3"><i class="fas fa-bolt"></i></div>
-            <div class="floating-icon icon-4"><i class="fas fa-leaf"></i></div>
-            <div class="floating-icon icon-5"><i class="fas fa-fire-flame-curved"></i></div>
-            <div class="floating-icon icon-6"><i class="fas fa-water"></i></div>
-        </div>
+    <!-- HERO / EQUIPO -->
+    <header id="inicio" class="hero">
         <div class="hero-content">
-            <div class="hero-badge animate-fade-in">
-                <i class="fas fa-globe-americas"></i> Objetivos de Desarrollo Sostenible
-            </div>
-            <h1 class="hero-title animate-slide-up">
-                <span class="highlight">ODS 7</span><br>
-                Energía Asequible y<br>No Contaminante
-            </h1>
-            <p class="hero-subtitle animate-slide-up-delay">
-                Garantizar el acceso a una energía asequible, fiable, sostenible y moderna para todos
-            </p>
-            <div class="hero-buttons animate-fade-in-delay">
-                <a href="#sobre-ods7" class="btn btn-primary">
-                    <i class="fas fa-info-circle"></i> Conocer Más
-                </a>
-                <a href="#recursos" class="btn btn-secondary">
-                    <i class="fas fa-link"></i> Recursos ONU
-                </a>
-            </div>
-            <div class="hero-stats animate-fade-in-delay-2">
-                <div class="stat">
-                    <span class="stat-number" data-target="733">0</span>
-                    <span class="stat-suffix">M</span>
-                    <p>Sin electricidad</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="2300">0</span>
-                    <span class="stat-suffix">M</span>
-                    <p>Sin combustibles limpios</p>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="29">0</span>
-                    <span class="stat-suffix">%</span>
-                    <p>Energía renovable mundial</p>
-                </div>
+            <span class="badge fade-in">Objetivo de Desarrollo Sostenible 7</span>
+            <h1 class="fade-in-up">Energía Asequible y <br><span class="highlight">No Contaminante</span></h1>
+            <p class="fade-in-up delay-1">Transformando el futuro con soluciones limpias, accesibles y sostenibles para cada rincón del planeta.</p>
+            <div class="hero-buttons fade-in-up delay-2">
+                <a href="#info" class="btn btn-primary">Conoce el ODS 7</a>
+                <a href="#recursos" class="btn btn-outline">Ver Recursos ONU</a>
             </div>
         </div>
-        <div class="hero-scroll-indicator">
-            <div class="mouse"><div class="wheel"></div></div>
-            <p>Desplázate</p>
+        <div class="hero-bg-elements">
+            <i class="fas fa-solar-panel float-1"></i>
+            <i class="fas fa-wind float-2"></i>
+            <i class="fas fa-bolt float-3"></i>
+            <i class="fas fa-leaf float-4"></i>
         </div>
-    </section>
+    </header>
 
-    <!-- EQUIPO -->
-    <section id="equipo" class="team-section">
+    <!-- EQUIPO ECOPOWER -->
+    <section id="equipo" class="section team-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-users"></i> Nuestro Equipo</span>
-                <h2>Conoce al Equipo <span class="gradient-text">EcoPower</span></h2>
-                <p class="section-description">
-                    Somos un equipo comprometido con la difusión del Objetivo de Desarrollo Sostenible 7,
-                    promoviendo la conciencia sobre la importancia de la energía limpia y accesible para todos.
-                </p>
-            </div>
-
+            <h2 class="section-title fade-in-scroll">Conoce al <span class="gradient-text">Equipo EcoPower</span></h2>
             <div class="team-grid">
-                <div class="team-card" data-tilt>
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <div class="avatar-circle"><i class="fas fa-user-graduate"></i></div>
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <h3>Catherine Arredondo</h3>
-                        <p class="team-role">Integrante del Equipo</p>
-                        <div class="team-socials">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
+                <div class="team-card fade-in-scroll delay-1">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <h3>Catherine Arredondo</h3>
+                    <p>Integrante</p>
                 </div>
-
-                <div class="team-card" data-tilt>
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <div class="avatar-circle"><i class="fas fa-user-graduate"></i></div>
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <h3>Valentina Maciel</h3>
-                        <p class="team-role">Integrante del Equipo</p>
-                        <div class="team-socials">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
+                <div class="team-card fade-in-scroll delay-2">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <h3>Valentina Maciel</h3>
+                    <p>Integrante</p>
                 </div>
-
-                <div class="team-card" data-tilt>
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <div class="avatar-circle"><i class="fas fa-user-graduate"></i></div>
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <h3>Camila Miranda</h3>
-                        <p class="team-role">Integrante del Equipo</p>
-                        <div class="team-socials">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
+                <div class="team-card fade-in-scroll delay-3">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <h3>Camila Miranda</h3>
+                    <p>Integrante</p>
                 </div>
-
-                <div class="team-card" data-tilt>
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <div class="avatar-circle"><i class="fas fa-user-graduate"></i></div>
-                            <div class="avatar-glow"></div>
-                        </div>
-                        <h3>David Barrios</h3>
-                        <p class="team-role">Integrante del Equipo</p>
-                        <div class="team-socials">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
+                <div class="team-card fade-in-scroll delay-4">
+                    <div class="team-avatar"><i class="fas fa-user"></i></div>
+                    <h3>David Barrios</h3>
+                    <p>Integrante</p>
                 </div>
             </div>
 
-            <!-- PROFESOR -->
-            <div class="professor-card">
-                <div class="professor-inner">
-                    <div class="professor-avatar">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <div class="professor-info">
-                        <span class="professor-label"><i class="fas fa-award"></i> Profesor Asesor</span>
-                        <h3>Prof. Juan Ramón Oropeza</h3>
-                        <p>Guía y mentor del equipo EcoPower en el desarrollo de este proyecto
-                           sobre el ODS 7, impulsando la investigación y la conciencia ambiental.</p>
-                    </div>
-                </div>
+            <div class="professor-card fade-in-scroll delay-3">
+                <div class="professor-badge"><i class="fas fa-chalkboard-teacher"></i> Asesor Académico</div>
+                <h3>Prof. Urban Juan Ramón Oropeza</h3>
+                <p>Guía y mentor en el desarrollo de proyectos educativos con enfoque sostenible y conciencia ambiental.</p>
             </div>
         </div>
     </section>
 
     <!-- CARRUSEL -->
-    <section id="carrusel" class="carousel-section">
+    <section id="carrusel" class="section carousel-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-images"></i> Galería Visual</span>
-                <h2>Energía que <span class="gradient-text">Transforma el Mundo</span></h2>
-                <p class="section-description">
-                    Descubre cómo las energías renovables están revolucionando nuestro planeta
-                    y creando un futuro más sostenible para las próximas generaciones.
-                </p>
-            </div>
-
-            <div class="carousel-wrapper">
-                <div class="carousel" id="carousel">
-                    <!-- Slide 1 -->
-                    <div class="carousel-slide active">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">01 / 06</span>
-                                    <h3>Energía Solar</h3>
-                                    <p>La energía solar fotovoltaica es una de las fuentes de energía renovable más prometedoras, capaz de transformar la luz del sol en electricidad limpia y sostenible.</p>
-                                    <a href="https://sdgs.un.org/goals/goal7" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
+            <h2 class="section-title fade-in-scroll">La Energía que <span class="gradient-text">Transforma al Mundo</span></h2>
+            <div class="carousel-container fade-in-scroll">
+                <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-track">
+                    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80')">
+                        <div class="slide-overlay">
+                            <h3>Energía Solar Fotovoltaica</h3>
+                            <p>Capturando la luz del sol para generar electricidad limpia y descentralizada.</p>
                         </div>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">02 / 06</span>
-                                    <h3>Energía Eólica</h3>
-                                    <p>Los aerogeneradores capturan la fuerza del viento para generar electricidad sin emisiones de carbono, siendo una pieza clave en la transición energética global.</p>
-                                    <a href="https://www.un.org/en/global-issues/energy" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80')">
+                        <div class="slide-overlay">
+                            <h3>Energía Eólica</h3>
+                            <p>Aprovechando la fuerza del viento mediante aerogeneradores modernos.</p>
                         </div>
                     </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1574360778004-9277e2455d0f?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">03 / 06</span>
-                                    <h3>Energía Hidroeléctrica</h3>
-                                    <p>El agua es un recurso invaluable para la generación de energía renovable. Las centrales hidroeléctricas proveen electricidad limpia a millones de hogares en todo el mundo.</p>
-                                    <a href="https://sdgs.un.org/goals/goal7" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1584207186005-5435772c609b?auto=format&fit=crop&w=1200&q=80')">
+                        <div class="slide-overlay">
+                            <h3>Hidroelectricidad Sostenible</h3>
+                            <p>Generando energía renovable con respeto por los ecosistemas acuáticos.</p>
                         </div>
                     </div>
-
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1559302504-64aae6ca646d?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">04 / 06</span>
-                                    <h3>Energía Geotérmica</h3>
-                                    <p>Aprovechando el calor del interior de la Tierra, la energía geotérmica ofrece una fuente constante y confiable de electricidad y calefacción sostenible.</p>
-                                    <a href="https://www.irena.org/Geothermal" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en IRENA
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80')">
+                        <div class="slide-overlay">
+                            <h3>Geotermia</h3>
+                            <p>Energía limpia y constante proveniente del calor interno de la Tierra.</p>
                         </div>
                     </div>
-
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1621274403997-37aace184f49?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">05 / 06</span>
-                                    <h3>Eficiencia Energética</h3>
-                                    <p>Mejorar la eficiencia energética en edificios, industria y transporte es fundamental para reducir el consumo de energía y las emisiones de gases de efecto invernadero.</p>
-                                    <a href="https://sdgs.un.org/goals/goal7" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1611365892117-00ac5ef43c90?auto=format&fit=crop&w=1200&q=80')">
+                        <div class="slide-overlay">
+                            <h3>Hidrógeno Verde</h3>
+                            <p>El combustible del futuro: cero emisiones, máximo potencial.</p>
                         </div>
                     </div>
-
-                    <!-- Slide 6 -->
-                    <div class="carousel-slide">
-                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1548613053-220e75581890?w=1200&q=80');">
-                            <div class="slide-overlay">
-                                <div class="slide-content">
-                                    <span class="slide-number">06 / 06</span>
-                                    <h3>Acceso Universal a la Energía</h3>
-                                    <p>Más de 700 millones de personas aún carecen de acceso a electricidad. El ODS 7 busca garantizar que todos tengan acceso a servicios energéticos modernos y asequibles.</p>
-                                    <a href="https://www.un.org/sustainabledevelopment/energy/" target="_blank" class="slide-link">
-                                        <i class="fas fa-arrow-right"></i> Ver más en ONU
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1559302504-64aae6ca646d?auto=format&fit=crop&w=1200&q=80')">
+                        <div class="slide-overlay">
+                            <h3>Eficiencia Energética</h3>
+                            <p>Hacer más con menos: la energía más limpia es la que no se desperdicia.</p>
                         </div>
                     </div>
                 </div>
-
-                <button class="carousel-btn carousel-prev" id="carousel-prev">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn carousel-next" id="carousel-next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <div class="carousel-indicators" id="carousel-indicators">
-                    <button class="indicator active" data-slide="0"></button>
-                    <button class="indicator" data-slide="1"></button>
-                    <button class="indicator" data-slide="2"></button>
-                    <button class="indicator" data-slide="3"></button>
-                    <button class="indicator" data-slide="4"></button>
-                    <button class="indicator" data-slide="5"></button>
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                    <span class="dot" data-index="4"></span>
+                    <span class="dot" data-index="5"></span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE EL ODS 7 -->
-    <section id="sobre-ods7" class="about-section">
+    <!-- INFO ODS 7 -->
+    <section id="info" class="section info-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-bullseye"></i> ODS 7</span>
-                <h2>¿Qué es el <span class="gradient-text">ODS 7?</span></h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-main-card">
-                    <div class="ods-icon-large">
-                        <svg viewBox="0 0 155 155" class="ods7-svg">
-                            <rect x="0" y="0" width="155" height="155" rx="10" fill="#FCC30B"/>
-                            <text x="50%" y="35%" dominant-baseline="middle" text-anchor="middle"
-                                  font-family="Poppins, sans-serif" font-weight="900" font-size="60"
-                                  fill="#1A1A1A">7</text>
-                            <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle"
-                                  font-family="Poppins, sans-serif" font-weight="700" font-size="11"
-                                  fill="#1A1A1A">ENERGÍA ASEQUIBLE</text>
-                            <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle"
-                                  font-family="Poppins, sans-serif" font-weight="700" font-size="11"
-                                  fill="#1A1A1A">Y NO CONTAMINANTE</text>
-                            <text x="50%" y="88%" dominant-baseline="middle" text-anchor="middle"
-                                  font-family="Poppins, sans-serif" font-weight="400" font-size="8"
-                                  fill="#1A1A1A">para todos</text>
-                        </svg>
-                    </div>
-                    <div class="about-text">
-                        <h3>Garantizar acceso a energía asequible, fiable, sostenible y moderna para todos</h3>
-                        <p>
-                            El Objetivo 7 de la Agenda 2030 para el Desarrollo Sostenible, adoptado por todos los
-                            Estados Miembros de las Naciones Unidas en 2015, busca garantizar el acceso universal
-                            a servicios de energía asequibles, fiables y modernos. La energía es central para
-                            prácticamente todos los desafíos y oportunidades principales que enfrenta el mundo actualmente.
-                        </p>
-                        <p>
-                            El acceso a la energía es esencial para la vida moderna: desde la iluminación de hogares
-                            hasta el funcionamiento de hospitales, escuelas y empresas. Sin embargo, millones de
-                            personas aún carecen de este derecho fundamental. La transición hacia fuentes de energía
-                            renovable es urgente para combatir el cambio climático y asegurar un futuro sostenible.
-                        </p>
-                    </div>
+            <h2 class="section-title fade-in-scroll">¿Qué es el <span class="gradient-text">ODS 7?</span></h2>
+            <div class="info-grid">
+                <div class="info-card fade-in-scroll">
+                    <div class="icon-box"><i class="fas fa-bullseye"></i></div>
+                    <h3>Acceso Universal</h3>
+                    <p>Garantizar que todas las personas tengan acceso a servicios energéticos asequibles, fiables y modernos para 2030.</p>
                 </div>
-
-                <div class="about-info-cards">
-                    <div class="info-card">
-                        <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
-                        <h4>Agenda 2030</h4>
-                        <p>Adoptado en septiembre de 2015 por la Asamblea General de la ONU como parte de los 17 Objetivos de Desarrollo Sostenible.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon"><i class="fas fa-globe"></i></div>
-                        <h4>Alcance Global</h4>
-                        <p>Aplica a los 193 Estados Miembros de la ONU, buscando soluciones energéticas que funcionen para todos los países del mundo.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon"><i class="fas fa-handshake"></i></div>
-                        <h4>Cooperación Internacional</h4>
-                        <p>Requiere la colaboración entre gobiernos, sector privado, sociedad civil y organismos internacionales para lograr las metas.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon"><i class="fas fa-chart-line"></i></div>
-                        <h4>Seguimiento Continuo</h4>
-                        <p>Se monitorea mediante indicadores específicos como el acceso a electricidad, energías limpias para cocinar y eficiencia energética.</p>
-                    </div>
+                <div class="info-card fade-in-scroll delay-1">
+                    <div class="icon-box"><i class="fas fa-leaf"></i></div>
+                    <h3>Energías Renovables</h3>
+                    <p>Aumentar sustancialmente la proporción de energía renovable en el mix energético mundial.</p>
+                </div>
+                <div class="info-card fade-in-scroll delay-2">
+                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                    <h3>Eficiencia Energética</h3>
+                    <p>Duplicar la tasa mundial de mejora de la eficiencia energética en todos los sectores.</p>
                 </div>
             </div>
+            <div class="info-detail fade-in-scroll">
+                <p>La energía es el hilo conductor que une los desafíos de <strong>crecimiento económico, inclusión social y sostenibilidad ambiental</strong>. El acceso a la energía permite la industrialización, impulsa la innovación, mejora la educación y la salud. Sin embargo, <strong>759 millones de personas</strong> aún carecen de electricidad y <strong>2.600 millones</strong> cocinan con combustibles contaminantes.</p>
+            </div>
+        </div>
+    </section>
 
-            <!-- Importancia -->
-            <div class="importance-section">
-                <h3 class="importance-title">¿Por qué es importante el ODS 7?</h3>
-                <div class="importance-grid">
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-heartbeat"></i></div>
-                        <h4>Salud</h4>
-                        <p>La contaminación del aire interior por combustibles tradicionales causa millones de muertes prematuras cada año. La energía limpia salva vidas.</p>
+    <!-- METAS -->
+    <section id="metas" class="section metas-section">
+        <div class="container">
+            <h2 class="section-title fade-in-scroll">Metas para <span class="gradient-text">2030</span></h2>
+            <div class="metas-grid">
+                <div class="meta-item fade-in-scroll">
+                    <span class="meta-num">7.1</span>
+                    <div class="meta-content">
+                        <h4>Acceso Universal</h4>
+                        <div class="progress-bar"><div class="progress" style="width: 0%" data-width="72%"></div></div>
                     </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <h4>Educación</h4>
-                        <p>La electricidad permite estudiar de noche, usar computadoras y acceder a información digital, mejorando la calidad educativa.</p>
+                </div>
+                <div class="meta-item fade-in-scroll delay-1">
+                    <span class="meta-num">7.2</span>
+                    <div class="meta-content">
+                        <h4>+Energía Renovable</h4>
+                        <div class="progress-bar"><div class="progress" style="width: 0%" data-width="65%"></div></div>
                     </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-briefcase"></i></div>
-                        <h4>Economía</h4>
-                        <p>La energía impulsa la industria, crea empleos y genera crecimiento económico sostenible en todas las regiones del mundo.</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-thermometer-half"></i></div>
-                        <h4>Clima</h4>
-                        <p>El sector energético representa el 60% de las emisiones globales de GEI. La transición renovable es clave contra el cambio climático.</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-female"></i></div>
-                        <h4>Igualdad de Género</h4>
-                        <p>El acceso a energía libera a mujeres y niñas de la carga de recolectar leña, dándoles tiempo para educación y oportunidades.</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-seedling"></i></div>
-                        <h4>Medio Ambiente</h4>
-                        <p>Las energías renovables reducen la contaminación del aire y agua, protegen la biodiversidad y conservan los ecosistemas naturales.</p>
+                </div>
+                <div class="meta-item fade-in-scroll delay-2">
+                    <span class="meta-num">7.3</span>
+                    <div class="meta-content">
+                        <h4>Duplicar Eficiencia</h4>
+                        <div class="progress-bar"><div class="progress" style="width: 0%" data-width="58%"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- METAS DEL ODS 7 -->
-    <section id="metas" class="goals-section">
+    <!-- ESTADÍSTICAS -->
+    <section class="section stats-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-flag-checkered"></i> Metas 2030</span>
-                <h2>Las <span class="gradient-text">4 Metas</span> del ODS 7</h2>
-                <p class="section-description">
-                    El ODS 7 establece metas específicas y medibles para lograr un futuro energético sostenible antes de 2030.
-                </p>
-            </div>
-
-            <div class="goals-timeline">
-                <!-- Meta 7.1 -->
-                <div class="goal-item">
-                    <div class="goal-number">7.1</div>
-                    <div class="goal-content">
-                        <div class="goal-header">
-                            <div class="goal-icon"><i class="fas fa-plug"></i></div>
-                            <h3>Acceso Universal a Servicios Energéticos</h3>
-                        </div>
-                        <p>De aquí a 2030, garantizar el acceso universal a servicios energéticos asequibles, fiables y modernos.
-                        Esto implica que cada persona en el planeta tenga acceso a electricidad y a soluciones limpias para cocinar.
-                        Actualmente, más de 733 millones de personas no tienen acceso a electricidad y alrededor de 2.300 millones
-                        dependen de combustibles contaminantes para cocinar.</p>
-                        <div class="goal-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-width="65" style="width:0">
-                                    <span class="progress-percent">65%</span>
-                                </div>
-                            </div>
-                            <span class="progress-label">Progreso actual estimado</span>
-                        </div>
-                        <a href="https://sdgs.un.org/goals/goal7#targets" target="_blank" class="goal-link">
-                            <i class="fas fa-external-link-alt"></i> Ver meta completa en la ONU
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Meta 7.2 -->
-                <div class="goal-item">
-                    <div class="goal-number">7.2</div>
-                    <div class="goal-content">
-                        <div class="goal-header">
-                            <div class="goal-icon"><i class="fas fa-solar-panel"></i></div>
-                            <h3>Aumentar la Proporción de Energías Renovables</h3>
-                        </div>
-                        <p>De aquí a 2030, aumentar considerablemente la proporción de energía renovable en el组合 energético mundial.
-                        Las energías renovables —solar, eólica, hidroeléctrica, geotérmica y de biomasa— deben pasar de representar
-                        aproximadamente el 29% de la generación eléctrica a más del 60% para cumplir con los objetivos climáticos
-                        del Acuerdo de París y limitar el calentamiento global a 1.5°C.</p>
-                        <div class="goal-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-width="45" style="width:0">
-                                    <span class="progress-percent">45%</span>
-                                </div>
-                            </div>
-                            <span class="progress-label">Progreso actual estimado</span>
-                        </div>
-                        <a href="https://www.un.org/en/global-issues/energy" target="_blank" class="goal-link">
-                            <i class="fas fa-external-link-alt"></i> Ver meta completa en la ONU
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Meta 7.3 -->
-                <div class="goal-item">
-                    <div class="goal-number">7.3</div>
-                    <div class="goal-content">
-                        <div class="goal-header">
-                            <div class="goal-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            <h3>Duplicar la Eficiencia Energética</h3>
-                        </div>
-                        <p>De aquí a 2030, duplicar la tasa mundial de mejora de la eficiencia energética. Esto significa hacer más
-                        con menos energía: mejorar el aislamiento de edificios, usar electrodomésticos más eficientes, optimizar
-                        procesos industriales y promover el transporte eléctrico. La eficiencia energética es considerada el
-                        "primer combustible" por la Agencia Internacional de Energía (AIE).</p>
-                        <div class="goal-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-width="40" style="width:0">
-                                    <span class="progress-percent">40%</span>
-                                </div>
-                            </div>
-                            <span class="progress-label">Progreso actual estimado</span>
-                        </div>
-                        <a href="https://www.iea.org/topics/energy-efficiency" target="_blank" class="goal-link">
-                            <i class="fas fa-external-link-alt"></i> Ver en la Agencia Internacional de Energía
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Meta 7.a y 7.b -->
-                <div class="goal-item">
-                    <div class="goal-number">7.a/b</div>
-                    <div class="goal-content">
-                        <div class="goal-header">
-                            <div class="goal-icon"><i class="fas fa-globe-americas"></i></div>
-                            <h3>Cooperación Internacional e Infraestructura</h3>
-                        </div>
-                        <p><strong>Meta 7.a:</strong> De aquí a 2030, intensificar la cooperación internacional para facilitar el acceso
-                        a la investigación y la tecnología relativas a la energía limpia, incluidas las fuentes renovables, la eficiencia
-                        energética y las tecnologías avanzadas y menos contaminantes de combustibles fósiles, y promover la inversión
-                        en infraestructura energética y tecnologías de energía limpia.<br><br>
-                        <strong>Meta 7.b:</strong> De aquí a 2030, ampliar la infraestructura y mejorar la tecnología para prestar
-                        servicios energéticos modernos y sostenibles para todos los países en desarrollo, en particular los países
-                        menos adelantados, los pequeños Estados insulares en desarrollo y los países en desarrollo sin litoral.</p>
-                        <div class="goal-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-width="35" style="width:0">
-                                    <span class="progress-percent">35%</span>
-                                </div>
-                            </div>
-                            <span class="progress-label">Progreso actual estimado</span>
-                        </div>
-                        <a href="https://sdgs.un.org/goals/goal7#targets" target="_blank" class="goal-link">
-                            <i class="fas fa-external-link-alt"></i> Ver metas completas en la ONU
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DATOS Y ESTADÍSTICAS -->
-    <section id="datos" class="stats-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-chart-bar"></i> Datos Clave</span>
-                <h2>El ODS 7 en <span class="gradient-text">Números</span></h2>
-            </div>
-
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-lightbulb"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="733">0</span>
-                        <span class="stat-unit">millones</span>
-                    </div>
-                    <p>Personas sin acceso a electricidad en el mundo</p>
+                <div class="stat-card fade-in-scroll">
+                    <i class="fas fa-users stat-icon"></i>
+                    <span class="stat-num" data-target="759">0</span>
+                    <p>Millones sin electricidad</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-fire-flame-curved"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="2300">0</span>
-                        <span class="stat-unit">millones</span>
-                    </div>
-                    <p>Personas que usan combustibles contaminantes para cocinar</p>
+                <div class="stat-card fade-in-scroll delay-1">
+                    <i class="fas fa-fire stat-icon"></i>
+                    <span class="stat-num" data-target="2600">0</span>
+                    <p>Millones con cocina contaminante</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-solar-panel"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="29">0</span>
-                        <span class="stat-unit">%</span>
-                    </div>
-                    <p>De la electricidad mundial proviene de fuentes renovables</p>
+                <div class="stat-card fade-in-scroll delay-2">
+                    <i class="fas fa-globe-americas stat-icon"></i>
+                    <span class="stat-num" data-target="29">0</span>
+                    <p>% de electricidad renovable actual</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-skull-crossbones"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="3200">0</span>
-                        <span class="stat-unit">mil</span>
-                    </div>
-                    <p>Muertes prematuras anuales por contaminación del aire interior</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-coins"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="1300">0</span>
-                        <span class="stat-unit">mil M$</span>
-                    </div>
-                    <p>Inversión anual necesaria en energías limpias para 2030</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-wind"></i></div>
-                    <div class="stat-info">
-                        <span class="stat-big-number" data-target="83">0</span>
-                        <span class="stat-unit">%</span>
-                    </div>
-                    <p>De la nueva capacidad eléctrica mundial en 2022 fue renovable</p>
+                <div class="stat-card fade-in-scroll delay-3">
+                    <i class="fas fa-coins stat-icon"></i>
+                    <span class="stat-num" data-target="1300">0</span>
+                    <p>Billones USD inversión anual necesaria</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TIPOS DE ENERGÍA RENOVABLE -->
-    <section class="renewable-section">
+    <!-- RECURSOS ONU -->
+    <section id="recursos" class="section resources-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-leaf"></i> Energías Limpias</span>
-                <h2>Tipos de <span class="gradient-text">Energía Renovable</span></h2>
-                <p class="section-description">
-                    Conoce las principales fuentes de energía limpia que están transformando nuestro futuro energético.
-                </p>
-            </div>
-
-            <div class="renewable-cards">
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background:linear-gradient(135deg,#FFD700,#FFA500)">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <h3>Solar</h3>
-                    <p>Capta la radiación del sol mediante paneles fotovoltaicos o sistemas térmicos para generar electricidad y calor.</p>
-                    <ul class="renewable-list">
-                        <li><i class="fas fa-check"></i> Paneles fotovoltaicos</li>
-                        <li><i class="fas fa-check"></i> Energía solar térmica</li>
-                        <li><i class="fas fa-check"></i> Concentración solar</li>
-                    </ul>
-                    <a href="https://www.irena.org/Solar" target="_blank" class="renewable-link">
-                        <i class="fas fa-arrow-right"></i> Más en IRENA
-                    </a>
-                </div>
-
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background:linear-gradient(135deg,#87CEEB,#4682B4)">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <h3>Eólica</h3>
-                    <p>Utiliza la fuerza del viento mediante aerogeneradores para producir electricidad de forma limpia y renovable.</p>
-                    <ul class="renewable-list">
-                        <li><i class="fas fa-check"></i> Turbinas terrestres</li>
-                        <li><i class="fas fa-check"></i> Turbinas marinas offshore</li>
-                        <li><i class="fas fa-check"></i> Mini-eólica distribuida</li>
-                    </ul>
-                    <a href="https://www.irena.org/Wind" target="_blank" class="renewable-link">
-                        <i class="fas fa-arrow-right"></i> Más en IRENA
-                    </a>
-                </div>
-
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background:linear-gradient(135deg,#4169E1,#1E90FF)">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <h3>Hidroeléctrica</h3>
-                    <p>Aprovecha la energía cinética del agua en movimiento para generar electricidad en centrales hidroeléctricas.</p>
-                    <ul class="renewable-list">
-                        <li><i class="fas fa-check"></i> Grandes presas</li>
-                        <li><i class="fas fa-check"></i> Minihidráulica</li>
-                        <li><i class="fas fa-check"></i> Energía mareomotriz</li>
-                    </ul>
-                    <a href="https://www.irena.org/Hydropower" target="_blank" class="renewable-link">
-                        <i class="fas fa-arrow-right"></i> Más en IRENA
-                    </a>
-                </div>
-
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background:linear-gradient(135deg,#FF6347,#FF4500)">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <h3>Geotérmica</h3>
-                    <p>Aprovecha el calor del interior de la Tierra para generar electricidad y calefacción de forma continua.</p>
-                    <ul class="renewable-list">
-                        <li><i class="fas fa-check"></i> Plantas de vapor seco</li>
-                        <li><i class="fas fa-check"></i> Ciclo binario</li>
-                        <li><i class="fas fa-check"></i> Bombas de calor geotérmicas</li>
-                    </ul>
-                    <a href="https://www.irena.org/Geothermal" target="_blank" class="renewable-link">
-                        <i class="fas fa-arrow-right"></i> Más en IRENA
-                    </a>
-                </div>
-
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background:linear-gradient(135deg,#32CD32,#228B22)">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Biomasa</h3>
-                    <p>Utiliza materia orgánica de origen vegetal o animal para producir energía térmica y eléctrica de forma renovable.</p>
-                    <ul class="renewable-list">
-                        <li><i class="fas fa-check"></i> Biogás</li>
-                        <li><i class="fas fa-check"></i> Biocombustibles</li>
-                        <li><i class="fas fa-check"></i> Combustión directa</li>
-                    </ul>
-                    <a href="https://www.irena.org/Bioenergy" target="_blank" class="renewable-link">
-                        <i class="fas fa-arrow-right"></i> Más en IRENA
-                    </a>
-                </div>
-
-                <div class="renewable-card">
-                    <div class="renewable-card-icon" style="background:linear-gradient(135deg,#00CED1,#008B8B)">
-                        <i class="fas fa-atom"></i>
-                    </div>
-                    <h3>Hidrógeno Verde</h3>
-                    <p>Producido mediante electrólisis del agua usando energías renovables, es el combustible del futuro sin emisiones.</p>
-                    <ul class="renewable-list">
-                        <li><i class="fas fa-check"></i> Electrólisis con solar/eólica</li>
-                        <li><i class="fas fa-check"></i> Pilas de combustible</li>
-                        <li><i class="fas fa-check"></i> Transporte pesado</li>
-                    </ul>
-                    <a href="https://www.irena.org/Hydrogen" target="_blank" class="renewable-link">
-                        <i class="fas fa-arrow-right"></i> Más en IRENA
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- RECURSOS Y ENLACES A LA ONU -->
-    <section id="recursos" class="resources-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-link"></i> Recursos Oficiales</span>
-                <h2>Enlaces Directos a la <span class="gradient-text">ONU</span></h2>
-                <p class="section-description">
-                    Accede a recursos oficiales de las Naciones Unidas y organismos internacionales
-                    para profundizar en el conocimiento del ODS 7.
-                </p>
-            </div>
-
+            <h2 class="section-title fade-in-scroll">Enlaces Directos a la <span class="gradient-text">ONU</span></h2>
             <div class="resources-grid">
-                <a href="https://sdgs.un.org/goals/goal7" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-globe"></i></div>
-                    <div class="resource-info">
-                        <h3>ONU - ODS 7 Página Oficial</h3>
-                        <p>Página oficial del Objetivo 7 en el sitio de Desarrollo Sostenible de la ONU con información completa, metas e indicadores.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
+                <a href="https://sdgs.un.org/goals/goal7" target="_blank" class="resource-card fade-in-scroll">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h3>Página Oficial ODS 7</h3>
+                        <p>Portal oficial de la ONU con metas, indicadores y progreso global.</p>
                     </div>
                 </a>
-
-                <a href="https://www.un.org/sustainabledevelopment/energy/" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-newspaper"></i></div>
-                    <div class="resource-info">
-                        <h3>ONU - Energía y Desarrollo Sostenible</h3>
-                        <p>Portal dedicado a la energía como herramienta de desarrollo sostenible, con noticias, informes y datos actualizados.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
+                <a href="https://www.un.org/sustainabledevelopment/energy/" target="_blank" class="resource-card fade-in-scroll delay-1">
+                    <i class="fas fa-bolt"></i>
+                    <div>
+                        <h3>ONU Energy</h3>
+                        <p>Estrategias globales para el acceso a energía limpia y sostenible.</p>
                     </div>
                 </a>
-
-                <a href="https://www.un.org/en/global-issues/energy" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-file-alt"></i></div>
-                    <div class="resource-info">
-                        <h3>ONU - Cuestiones Globales: Energía</h3>
-                        <p>Información sobre los desafíos energéticos globales desde la perspectiva de las Naciones Unidas y sus agencias.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
+                <a href="https://www.unep.org/explore-topics/energy" target="_blank" class="resource-card fade-in-scroll delay-2">
+                    <i class="fas fa-leaf"></i>
+                    <div>
+                        <h3>PNUMA Energía</h3>
+                        <p>Informes sobre transición energética y medio ambiente.</p>
                     </div>
                 </a>
-
-                <a href="https://www.irena.org/" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-solar-panel"></i></div>
-                    <div class="resource-info">
-                        <h3>IRENA - Agencia Internacional de Energías Renovables</h3>
-                        <p>Organismo intergubernamental que apoya a los países en su transición hacia un futuro energético sostenible.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-
-                <a href="https://www.unep.org/explore-topics/energy" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-leaf"></i></div>
-                    <div class="resource-info">
-                        <h3>PNUMA - Programa de la ONU para el Medio Ambiente</h3>
-                        <p>Informes y recursos del Programa de las Naciones Unidas para el Medio Ambiente sobre energía y sostenibilidad.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-
-                <a href="https://www.iea.org/reports/tracking-sdg7" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-chart-pie"></i></div>
-                    <div class="resource-info">
-                        <h3>AIE - Seguimiento del ODS 7</h3>
-                        <p>Seguimiento del progreso hacia el ODS 7 realizado por la Agencia Internacional de la Energía con datos actualizados.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-
-                <a href="https://www.worldbank.org/en/topic/energy" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-university"></i></div>
-                    <div class="resource-info">
-                        <h3>Banco Mundial - Energía</h3>
-                        <p>Programas, datos e informes del Banco Mundial sobre acceso a energía, eficiencia y energías renovables.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-
-                <a href="https://energy.un.org/" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-handshake"></i></div>
-                    <div class="resource-info">
-                        <h3>ONU Energy - Energía de la ONU</h3>
-                        <p>Plataforma de coordinación de energía de la ONU que reúne a múltiples agencias para acelerar la transición energética.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-
-                <a href="https://www.undp.org/our-focus/climate-and-disaster-resilience/energy" target="_blank" class="resource-card">
-                    <div class="resource-icon"><i class="fas fa-seedling"></i></div>
-                    <div class="resource-info">
-                        <h3>PNUD - Energía y Clima</h3>
-                        <p>Programa de las Naciones Unidas para el Desarrollo: iniciativas de energía sostenible para reducir la pobreza y combatir el cambio climático.</p>
-                        <span class="resource-visit">Visitar <i class="fas fa-external-link-alt"></i></span>
+                <a href="https://www.irena.org/" target="_blank" class="resource-card fade-in-scroll delay-3">
+                    <i class="fas fa-solar-panel"></i>
+                    <div>
+                        <h3>IRENA</h3>
+                        <p>Agencia Internacional de Energías Renovables (apoyada por la ONU).</p>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ¿CÓMO PUEDES AYUDAR? -->
-    <section id="accion" class="action-section">
+    <!-- BLOG: AGENTES DE CAMBIO -->
+    <section id="blog" class="section blog-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-hands-helping"></i> Toma Acción</span>
-                <h2>¿Cómo Puedes <span class="gradient-text">Ayudar?</span></h2>
-                <p class="section-description">
-                    Cada persona puede contribuir al logro del ODS 7. Aquí tienes acciones concretas que puedes implementar hoy mismo.
-                </p>
-            </div>
+            <h2 class="section-title fade-in-scroll">Blog: <span class="gradient-text">Agentes de Cambio</span></h2>
+            <p class="section-sub fade-in-scroll">5 historias reales de adolescentes de preparatoria que están liderando la transición energética en sus países.</p>
+            
+            <div class="blog-grid">
+                <!-- Blog 1 -->
+                <article class="blog-card fade-in-scroll" data-blog="1">
+                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80');">
+                        <span class="blog-tag">🇰🇪 Kenia</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>Amina: Micro-redes solares en aldeas</h3>
+                        <p>Diseñó un sistema fotovoltaico modular para llevar luz a escuelas rurales.</p>
+                        <button class="blog-btn">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
 
-            <div class="action-grid">
-                <div class="action-card">
-                    <div class="action-number">01</div>
-                    <div class="action-icon"><i class="fas fa-lightbulb"></i></div>
-                    <h3>Usa LED</h3>
-                    <p>Reemplaza tus bombillas por focos LED que consumen hasta un 80% menos de energía y duran mucho más.</p>
-                </div>
-                <div class="action-card">
-                    <div class="action-number">02</div>
-                    <div class="action-icon"><i class="fas fa-plug"></i></div>
-                    <h3>Desconecta</h3>
-                    <p>Desconecta aparatos eléctricos que no estés usando. El consumo fantasma representa hasta el 10% de tu factura.</p>
-                </div>
-                <div class="action-card">
-                    <div class="action-number">03</div>
-                    <div class="action-icon"><i class="fas fa-sun"></i></div>
-                    <h3>Instala Solar</h3>
-                    <p>Si es posible, instala paneles solares en tu hogar. La energía solar es cada vez más accesible y económica.</p>
-                </div>
-                <div class="action-card">
-                    <div class="action-number">04</div>
-                    <div class="action-icon"><i class="fas fa-bus"></i></div>
-                    <h3>Transporte Limpio</h3>
-                    <p>Usa transporte público, bicicleta o vehículos eléctricos para reducir las emisiones de carbono.</p>
-                </div>
-                <div class="action-card">
-                    <div class="action-number">05</div>
-                    <div class="action-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Difunde</h3>
-                    <p>Comparte información sobre el ODS 7 con tu comunidad. La conciencia es el primer paso hacia el cambio.</p>
-                </div>
-                <div class="action-card">
-                    <div class="action-number">06</div>
-                    <div class="action-icon"><i class="fas fa-vote-yea"></i></div>
-                    <h3>Exige Políticas</h3>
-                    <p>Apoya políticas públicas que promuevan las energías renovables y la eficiencia energética en tu localidad.</p>
-                </div>
+                <!-- Blog 2 -->
+                <article class="blog-card fade-in-scroll delay-1" data-blog="2">
+                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80');">
+                        <span class="blog-tag">🇮🇳 India</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>Rohan: Biogás escolar para cocinar</h3>
+                        <p>Transformó residuos agrícolas en biodigestores, eliminando leña en 30 hogares.</p>
+                        <button class="blog-btn">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article class="blog-card fade-in-scroll delay-2" data-blog="3">
+                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80');">
+                        <span class="blog-tag">🇨🇴 Colombia</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>Sofía: Eólica para el pueblo Wayúu</h3>
+                        <p>Instaló mini-turbinas de viento reciclado en comunidades aisladas de La Guajira.</p>
+                        <button class="blog-btn">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Blog 4 -->
+                <article class="blog-card fade-in-scroll delay-3" data-blog="4">
+                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80');">
+                        <span class="blog-tag">🇩🇪 Alemania</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>Lukas: Techos solares en escuelas</h3>
+                        <p>Campaña estudiantil que logró paneles solares en 15 colegios públicos de Berlín.</p>
+                        <button class="blog-btn">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Blog 5 -->
+                <article class="blog-card fade-in-scroll delay-4" data-blog="5">
+                    <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=600&q=80');">
+                        <span class="blog-tag">🇧🇷 Brasil</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>Mariana: Hidroeléctrica comunitaria</h3>
+                        <p>Desarrolló micro-turbinas fluviales para electrificar aldeas amazónicas sin deforestar.</p>
+                        <button class="blog-btn">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- MODAL -->
+        <div id="blog-modal" class="modal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h3 id="modal-title"></h3>
+                <div id="modal-body"></div>
             </div>
         </div>
     </section>
@@ -1656,19 +384,9 @@ Aquí está el código completo por partes:
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-logo">
-                        <i class="fas fa-bolt"></i>
-                        <span>EcoPower</span>
-                    </div>
-                    <p>Equipo comprometido con la difusión del ODS 7: Energía Asequible y No Contaminante.
-                       Juntos podemos construir un futuro energético sostenible para todos.</p>
-                    <div class="footer-socials">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+                <div class="footer-brand">
+                    <h3><i class="fas fa-bolt"></i> EcoPower</h3>
+                    <p>Comprometidos con el ODS 7 y un futuro energético sostenible para todos.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Integrantes</h4>
@@ -1680,32 +398,19 @@ Aquí está el código completo por partes:
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Profesor Asesor</h4>
+                    <h4>Asesor</h4>
                     <ul>
-                        <li><strong>Prof. Juan Ramón Oropeza</strong></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Enlaces Útiles</h4>
-                    <ul>
-                        <li><a href="https://sdgs.un.org/goals/goal7" target="_blank">ODS 7 - ONU</a></li>
-                        <li><a href="https://www.un.org/sustainabledevelopment/energy/" target="_blank">ONU Energía</a></li>
-                        <li><a href="https://www.irena.org/" target="_blank">IRENA</a></li>
-                        <li><a href="https://www.iea.org/" target="_blank">AIE</a></li>
+                        <li>Prof. Urban Juan Ramón Oropeza</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Equipo EcoPower | ODS 7 - Energía Asequible y No Contaminante | Todos los derechos reservados</p>
-                <p>Prof. Juan Ramón Oropeza | Catherine Arredondo · Valentina Maciel · Camila Miranda · David Barrios</p>
+                <p>&copy; 2025 Equipo EcoPower | Proyecto Educativo ODS 7 | Fuentes: un.org, sdgs.un.org</p>
             </div>
         </div>
     </footer>
 
-    <!-- BOTÓN VOLVER ARRIBA -->
-    <button id="back-to-top" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <button id="back-top" aria-label="Subir"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>
